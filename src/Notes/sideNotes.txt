@@ -1,0 +1,57 @@
+https://www.robinwieruch.de/react-fetching-data
+
+https://pl.reactjs.org/docs/conditional-rendering.html
+
+## don't need to bid this fir arrow functions in React
+
+## don't want to fetch location on load so used Promise
+##https://stackoverflow.com/questions/43370176/using-async-setstate
+## OR
+## https://www.pluralsight.com/guides/executing-promises-in-a-react-component
+
+#TO DO
+## check hours for other location. use cross browser test or other ways to check pege in another getTimezoneOffset
+
+
+# change arrow function to avoid additiona renders
+
+
+
+
+
+
+
+
+
+
+
+I need to fetch data from two different API endpoints in my React app. I need to use data received from the first API in the endpoint of the second one. In addition I need to call the first API on three different events in my application, so I placed it in a separate method which returns a promise. In example below I'm going to fetch data from the second API after promise is resolved:
+
+getLocation = () => {
+  return new Promise((resolve, reject) => {
+    fetch(endpoint)
+      .then((res) => res.json())
+      .then((json) => {
+        this.setState({
+          location: json.location
+        });
+        resolve();
+      })
+      .catch(err => {
+        reject( new Error('Cannot fetch location data.') );
+      });
+  });
+}
+
+getDefaultData = async () => {
+  try {
+    await this.getLocation( locationEndpoint );
+  } catch ( err ) {
+    alert( err );
+    return null;
+  }
+  this.fetchDataFromSecondAPI();
+}
+
+    Is this good practice to use Promises in this way in React ?
+    Is it ok to update the state after receiving data from each API, or it is better to return it from getLocation method and update state only one time after receiving data from both API.
