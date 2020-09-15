@@ -2,7 +2,7 @@ import React from 'react';
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 
 const MapContainer = props => {
-  const { location, position, zoom, onMapClick } = props;
+  const { position, zoom, onMapClick } = props;
 
   return (
     <Map center={ position } zoom={ zoom } onClick={ onMapClick } className="map">

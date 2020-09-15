@@ -55,9 +55,6 @@ const MainMenu = ({ open, setOpen }) => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">Inspiration</NavLink>
-      </li>
-      <li>
         <NavLink to="/about">About</NavLink>
       </li>
     </Ul>

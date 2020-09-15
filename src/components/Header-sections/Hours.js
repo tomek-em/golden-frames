@@ -5,13 +5,14 @@ import styled from 'styled-components';
 
 const HoursInfo = styled.div`
   padding-right: 6px;
+  margin-bottom: 2.4rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   h2 {
-    font-size: 2rem;
+    font-size: 34px;
     margin-top: 1.2rem;
     margin-bottom: 2rem;
   }
@@ -26,7 +27,7 @@ const HoursInfo = styled.div`
     font-size: 1rem;
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 1050px) {
     h2 {
       font-size: 26px;
       margin-bottom: 24px;
@@ -56,11 +57,6 @@ const HoursInfo = styled.div`
 
 class Hours extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-
   render () {
     return (
       <HoursInfo>
@@ -75,7 +71,10 @@ class Hours extends React.Component {
 
         <p className="small" > *Please note that all times are <span className="w-600">in your time zone (UTC { this.props.location.timezone })</span>.
           If you selected area out from your current time zone you need to calculate time difference to get hours in regional time. </p>
-        <Button handleOnClick={ this.props.backToStart } value={ 'Back' } />
+        <div>
+          <Button handleOnClick={ this.props.backToStart } value={ 'Back' } />
+        </div>
+
       </HoursInfo>
     )
   }

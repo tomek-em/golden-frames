@@ -15,13 +15,9 @@ import Wrapper from '../components/Header-sections/Wrapper-styles';
 const Header = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #FF827D;
   color: #fff;
-
-  @media (max-width: 760px) {
-    min-height: 100vh;
-  }
 `
 
 
@@ -133,8 +129,6 @@ class Home extends Component {
         let zone_h = parseFloat( location.timezone.substring(0, location.timezone.length - 2) );
         let zone_m = parseFloat( location.timezone.substring(location.timezone.length - 2, location.timezone.length) );
         if (zone_m == 30) zone_h += 0.5;
-        // let sunrise2 = moment( sunrise ).add(-2.5, 'hours').format('hh:mm:ss');
-        // let sunrise2 = new Date( sunriseUTC.getTime() - sunriseUTC.getTimezoneOffset() * 60 * 1000 );
 
         this.setState({
           hours: {
@@ -155,7 +149,6 @@ class Home extends Component {
         });
       })
       .catch(err => {
-        // console.error('Cannot fetch location ', err);
         this.setState({
           error: err,
           isLoading: false
@@ -246,7 +239,7 @@ class Home extends Component {
 
   render () {
 
-    let { location, zoom, hours, curDate, error, gotLocation, isLoading } = this.state;
+    let { location, zoom, hours, curDate, gotLocation, isLoading } = this.state;
     let heroSection;
 
     if (isLoading ) {

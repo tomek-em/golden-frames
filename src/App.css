@@ -32,6 +32,10 @@ body {
   font-weight: 600;
 }
 
+.mw-150 {
+  max-width: 150px;
+}
+
 .leaflet-container {
   width: 50%;
   height: 90%;

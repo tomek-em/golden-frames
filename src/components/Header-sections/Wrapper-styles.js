@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-item: center;
@@ -18,12 +17,15 @@ const Wrapper = styled.div`
     max-width: 700px;
     margin-left: auto;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
       .hero-text {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         width: calc(100% - 5rem);
+        margin-bottom: 65px;
 
         h1 {
           font-family: 'montserrat', sans-serif;
@@ -45,6 +47,7 @@ const Wrapper = styled.div`
     border: 1px solid #999;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 
       img {
         position: absolute;
@@ -71,9 +74,11 @@ const Wrapper = styled.div`
       width: 100%;
       margin-top: 3rem;
       min-height: calc(100vh - 3rem);
-      padding: 65px 3rem;
+      padding: 65px 2rem;
 
       .hero-text {
+        width: 100%;
+
         h1{
           font-size: 36px;
           line-height: 48px;

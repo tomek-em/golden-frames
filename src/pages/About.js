@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Navbar from '../components/Nav/Navbar';
 
 import styled from 'styled-components';
@@ -36,7 +36,7 @@ const About = props => {
 
       <div className="container">
         <h2>Golden frames</h2>
-        <p>Golden frames is a golden hour calculator and photo inspiration book.</p>
+        <p>Golden frames is a golden hour calculator.</p>
         <p>In photography, the golden hour is the period of daytime shortly after sunrise or before sunset, during which daylight is redder and softer than when the Sun is higher in the sky.
         The period of time right before sunrise and shortly after sunset is called the "magic hour," especially by cinematographers. <i>- wikipedia.org</i></p>
         <br/>

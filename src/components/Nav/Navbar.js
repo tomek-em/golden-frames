@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import MainMenu from './MainMenu';
 import Burger from './Burger';
 
@@ -23,7 +24,7 @@ const Nav = styled.nav`
     .logo {
       padding: 15px 0;
 
-      span {
+      a {
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -36,14 +37,14 @@ const Nav = styled.nav`
 
 
 const Navbar = (props) => {
-  // use useState hook to handle open navbar
+  // use hooks to handle open navbar
   const [ open, setOpen ] = useState(false);
 
   return (
     <Nav>
       <div className="container">
-        <div className="logo">
-          <span>Golden Frames</span>
+        <div className="logo" >
+          <NavLink to="/">Golden Frames</NavLink>
         </div>
         <div>
         <Burger open={open} setOpen={setOpen}/>

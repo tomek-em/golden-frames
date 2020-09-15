@@ -8,14 +8,16 @@ const Btn = styled.a`
   text-align: center;
   min-width: 140px;
   margin-top: 3rem;
+  margin-bottom: 1rem;
   margin-right: 1rem;
   cursor: pointer;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 6px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 940px) {
       margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
       padding: 6px 12px;
       min-width: 100px;
     }

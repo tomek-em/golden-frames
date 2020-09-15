@@ -1,4 +1,4 @@
-import React, { createRef, Component } from 'react';
+import React from 'react';
 import MapContainer from './MapContainer';
 import CustomForm from './CustomForm';
 import Button from '../Buttons/Button';
@@ -61,12 +61,6 @@ const ModalContainer = styled.div`
 
 
 class Modal extends React.Component {
-  constructor( props ) {
-    super( props );
-
-  }
-
-
 
   render () {
     const { location, zoom, curDate, handleDateChange, confirmCustom, toggleModal, onMapClick } = this.props;
