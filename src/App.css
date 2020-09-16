@@ -19,10 +19,10 @@ body {
     lg (for laptops and desktops - screens equal to or greater than 1200px wide)
  */
 .container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 3rem;
+  padding: 0 4rem;
 }
 
 .w-300 {
@@ -42,6 +42,10 @@ body {
 }
 
 @media (max-width: 760px) {
+  .container {
+    padding: 0 3rem;
+  }
+
   .leaflet-container {
     width: calc(100% - 2rem);
     max-height: 40%;

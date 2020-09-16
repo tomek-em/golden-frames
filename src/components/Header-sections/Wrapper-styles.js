@@ -13,8 +13,8 @@ const Wrapper = styled.div`
   }
 
   .left-column {
-    padding: 65px 2rem 0 3rem;
-    max-width: 700px;
+    padding: 65px 2rem 0 4rem;
+    max-width: 750px;
     margin-left: auto;
     position: relative;
     min-height: 100vh;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
       .hero-text {
         width: calc(100% - 5rem);
-        margin-bottom: 65px;
+        margin-bottom: 40px;
 
         h1 {
           font-family: 'montserrat', sans-serif;
@@ -58,6 +58,13 @@ const Wrapper = styled.div`
         height: auto;
         min-height: 100%;
       }
+  }
+
+  @media (max-width: 1360px) {
+    .left-column .hero-text h1 {
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   @media (max-width: 840px) {

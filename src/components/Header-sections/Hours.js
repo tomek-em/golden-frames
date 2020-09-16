@@ -29,12 +29,23 @@ const HoursInfo = styled.div`
 
   @media (max-width: 1050px) {
     h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    h2 {
       font-size: 26px;
       margin-bottom: 24px;
     }
 
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .small {

@@ -41,6 +41,7 @@ const About = props => {
         The period of time right before sunrise and shortly after sunset is called the "magic hour," especially by cinematographers. <i>- wikipedia.org</i></p>
         <br/>
         <p>Credits: Sunrise - sunset <a href="https://sunrise-sunset.org/api">API</a>.</p>
+        <p>Picture: Ann Savchenko <a href="https://unsplash.com/@emulsio">Unsplash.com</a>.</p>
         <p>Created and designed by <a href="https://tomaszmejer.com">Tomasz Mejer</a>.</p>
       </div>
 

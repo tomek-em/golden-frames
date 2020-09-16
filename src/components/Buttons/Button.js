@@ -15,7 +15,7 @@ const Btn = styled.a`
   border: 1px solid #fff;
   border-radius: 6px;
 
-    @media (max-width: 940px) {
+    @media (max-width: 980px) {
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
       padding: 6px 12px;
